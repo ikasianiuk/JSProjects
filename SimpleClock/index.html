@@ -35,6 +35,11 @@
 			minutesHand.style.transform = `rotate(${minsDedrees}deg)`;
 			hoursdHand.style.transform = `rotate(${hoursDedrees}deg`;
 			
+			if (seconds === 0){
+				secondHand.style.transition = 'none';
+			} else {
+				secondHand.style.transition = `all .05s`
+			}			
 		}
 		
 		setInterval(setDate, 1000);
